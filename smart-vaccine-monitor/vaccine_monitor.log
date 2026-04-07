@@ -11510,3 +11510,375 @@
 2026-04-07 21:40:10 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=14.8°C, ext=34.5°C, humidity=63.4%, deviation=1.53σ
 2026-04-07 21:40:10 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=100.0, vvm=35.155566, potency=0.0%, exposure=427min, anomaly=True, eta=None
 2026-04-07 21:40:10 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=100.0, vvm=35.155566, potency=0.0%, exposure=427min, anomaly=True, eta=None
+2026-04-07 21:40:13 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=35.221408, potency=0.0%, exposure=428min, anomaly=False, eta=None
+2026-04-07 21:40:13 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=35.221408, potency=0.0%, exposure=428min, anomaly=False, eta=None
+2026-04-07 21:40:16 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=35.283171, potency=0.0%, exposure=429min, anomaly=False, eta=None
+2026-04-07 21:40:16 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=35.283171, potency=0.0%, exposure=429min, anomaly=False, eta=None
+2026-04-07 21:40:19 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=14.3°C, ext=27.1°C, humidity=61.4%, deviation=1.18σ
+2026-04-07 21:40:19 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=14.3°C, ext=27.1°C, humidity=61.4%, deviation=1.18σ
+2026-04-07 21:40:19 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=100.0, vvm=35.344043, potency=0.0%, exposure=430min, anomaly=True, eta=None
+2026-04-07 21:40:19 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=100.0, vvm=35.344043, potency=0.0%, exposure=430min, anomaly=True, eta=None
+2026-04-07 21:40:22 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=35.402672, potency=0.0%, exposure=431min, anomaly=False, eta=None
+2026-04-07 21:40:22 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=35.402672, potency=0.0%, exposure=431min, anomaly=False, eta=None
+2026-04-07 21:40:25 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=35.458724, potency=0.0%, exposure=432min, anomaly=False, eta=None
+2026-04-07 21:40:25 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=35.458724, potency=0.0%, exposure=432min, anomaly=False, eta=None
+2026-04-07 21:40:28 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=35.513297, potency=0.0%, exposure=433min, anomaly=False, eta=None
+2026-04-07 21:40:28 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=35.513297, potency=0.0%, exposure=433min, anomaly=False, eta=None
+2026-04-07 21:40:31 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=12.8°C, ext=27.6°C, humidity=49.2%, deviation=0.29σ
+2026-04-07 21:40:31 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=12.8°C, ext=27.6°C, humidity=49.2%, deviation=0.29σ
+2026-04-07 21:40:31 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=100.0, vvm=35.563707, potency=0.0%, exposure=434min, anomaly=True, eta=None
+2026-04-07 21:40:31 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=100.0, vvm=35.563707, potency=0.0%, exposure=434min, anomaly=True, eta=None
+2026-04-07 21:40:34 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=35.612001, potency=0.0%, exposure=435min, anomaly=False, eta=None
+2026-04-07 21:40:34 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=35.612001, potency=0.0%, exposure=435min, anomaly=False, eta=None
+2026-04-07 21:40:37 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=35.658607, potency=0.0%, exposure=436min, anomaly=False, eta=None
+2026-04-07 21:40:37 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=35.658607, potency=0.0%, exposure=436min, anomaly=False, eta=None
+2026-04-07 21:40:40 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=12.2°C, ext=26.8°C, humidity=47.2%, deviation=0.12σ
+2026-04-07 21:40:40 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=12.2°C, ext=26.8°C, humidity=47.2%, deviation=0.12σ
+2026-04-07 21:40:40 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=100.0, vvm=35.705731, potency=0.0%, exposure=437min, anomaly=True, eta=None
+2026-04-07 21:40:40 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=100.0, vvm=35.705731, potency=0.0%, exposure=437min, anomaly=True, eta=None
+2026-04-07 21:40:43 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=35.751654, potency=0.0%, exposure=438min, anomaly=False, eta=None
+2026-04-07 21:40:43 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=35.751654, potency=0.0%, exposure=438min, anomaly=False, eta=None
+2026-04-07 21:40:46 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=35.795803, potency=0.0%, exposure=439min, anomaly=False, eta=None
+2026-04-07 21:40:46 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=35.795803, potency=0.0%, exposure=439min, anomaly=False, eta=None
+2026-04-07 21:40:49 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=35.834574, potency=0.0%, exposure=440min, anomaly=False, eta=None
+2026-04-07 21:40:49 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=35.834574, potency=0.0%, exposure=440min, anomaly=False, eta=None
+2026-04-07 21:40:52 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=35.872159, potency=0.0%, exposure=441min, anomaly=False, eta=None
+2026-04-07 21:40:52 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=35.872159, potency=0.0%, exposure=441min, anomaly=False, eta=None
+2026-04-07 21:40:55 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=9.7°C, ext=24.7°C, humidity=50.9%, deviation=1.92σ
+2026-04-07 21:40:55 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=9.7°C, ext=24.7°C, humidity=50.9%, deviation=1.92σ
+2026-04-07 21:40:55 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=100.0, vvm=35.906645, potency=0.0%, exposure=442min, anomaly=True, eta=None
+2026-04-07 21:40:55 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=100.0, vvm=35.906645, potency=0.0%, exposure=442min, anomaly=True, eta=None
+2026-04-07 21:40:58 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=9.8°C, ext=26.1°C, humidity=53.1%, deviation=1.82σ
+2026-04-07 21:40:58 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=9.8°C, ext=26.1°C, humidity=53.1%, deviation=1.82σ
+2026-04-07 21:40:58 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=100.0, vvm=35.941653, potency=0.0%, exposure=443min, anomaly=True, eta=None
+2026-04-07 21:40:58 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=100.0, vvm=35.941653, potency=0.0%, exposure=443min, anomaly=True, eta=None
+2026-04-07 21:41:01 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=9.5°C, ext=22.7°C, humidity=53.5%, deviation=2.00σ
+2026-04-07 21:41:01 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=9.5°C, ext=22.7°C, humidity=53.5%, deviation=2.00σ
+2026-04-07 21:41:01 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=100.0, vvm=35.975203, potency=0.0%, exposure=444min, anomaly=True, eta=None
+2026-04-07 21:41:01 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=100.0, vvm=35.975203, potency=0.0%, exposure=444min, anomaly=True, eta=None
+2026-04-07 21:41:04 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=8.9°C, ext=23.3°C, humidity=46.8%, deviation=2.31σ
+2026-04-07 21:41:04 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=8.9°C, ext=23.3°C, humidity=46.8%, deviation=2.31σ
+2026-04-07 21:41:04 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=98.8, vvm=36.006320, potency=0.0%, exposure=445min, anomaly=True, eta=None
+2026-04-07 21:41:04 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=98.8, vvm=36.006320, potency=0.0%, exposure=445min, anomaly=True, eta=None
+2026-04-07 21:41:07 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=9.0°C, ext=24.4°C, humidity=50.2%, deviation=2.12σ
+2026-04-07 21:41:07 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=9.0°C, ext=24.4°C, humidity=50.2%, deviation=2.12σ
+2026-04-07 21:41:07 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=100.0, vvm=36.037990, potency=0.0%, exposure=446min, anomaly=True, eta=None
+2026-04-07 21:41:07 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=100.0, vvm=36.037990, potency=0.0%, exposure=446min, anomaly=True, eta=None
+2026-04-07 21:41:10 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=9.0°C, ext=24.5°C, humidity=48.4%, deviation=2.06σ
+2026-04-07 21:41:10 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=9.0°C, ext=24.5°C, humidity=48.4%, deviation=2.06σ
+2026-04-07 21:41:10 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=100.0, vvm=36.069620, potency=0.0%, exposure=447min, anomaly=True, eta=None
+2026-04-07 21:41:10 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=100.0, vvm=36.069620, potency=0.0%, exposure=447min, anomaly=True, eta=None
+2026-04-07 21:41:13 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=8.0°C, ext=25.4°C, humidity=52.6%, deviation=2.49σ
+2026-04-07 21:41:13 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=8.0°C, ext=25.4°C, humidity=52.6%, deviation=2.49σ
+2026-04-07 21:41:13 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=89.7, vvm=36.097363, potency=0.0%, exposure=447min, anomaly=True, eta=None
+2026-04-07 21:41:13 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=89.7, vvm=36.097363, potency=0.0%, exposure=447min, anomaly=True, eta=None
+2026-04-07 21:41:16 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=8.4°C, ext=22.5°C, humidity=50.1%, deviation=2.12σ
+2026-04-07 21:41:16 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=8.4°C, ext=22.5°C, humidity=50.1%, deviation=2.12σ
+2026-04-07 21:41:16 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=94.4, vvm=36.126803, potency=0.0%, exposure=448min, anomaly=True, eta=None
+2026-04-07 21:41:16 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=94.4, vvm=36.126803, potency=0.0%, exposure=448min, anomaly=True, eta=None
+2026-04-07 21:41:19 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=7.7°C, ext=23.8°C, humidity=50.0%, deviation=2.36σ
+2026-04-07 21:41:19 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=7.7°C, ext=23.8°C, humidity=50.0%, deviation=2.36σ
+2026-04-07 21:41:19 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=86.5, vvm=36.153443, potency=0.0%, exposure=448min, anomaly=True, eta=None
+2026-04-07 21:41:19 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=86.5, vvm=36.153443, potency=0.0%, exposure=448min, anomaly=True, eta=None
+2026-04-07 21:41:22 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=6.8°C, ext=25.6°C, humidity=53.3%, deviation=2.55σ
+2026-04-07 21:41:22 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=6.8°C, ext=25.6°C, humidity=53.3%, deviation=2.55σ
+2026-04-07 21:41:22 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=78.2, vvm=36.177415, potency=0.0%, exposure=448min, anomaly=True, eta=None
+2026-04-07 21:41:22 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=78.2, vvm=36.177415, potency=0.0%, exposure=448min, anomaly=True, eta=None
+2026-04-07 21:41:25 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=7.3°C, ext=28.5°C, humidity=48.4%, deviation=2.16σ
+2026-04-07 21:41:25 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=7.3°C, ext=28.5°C, humidity=48.4%, deviation=2.16σ
+2026-04-07 21:41:25 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=83.4, vvm=36.203027, potency=0.0%, exposure=448min, anomaly=True, eta=None
+2026-04-07 21:41:25 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=83.4, vvm=36.203027, potency=0.0%, exposure=448min, anomaly=True, eta=None
+2026-04-07 21:41:28 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=6.7°C, ext=24.0°C, humidity=59.7%, deviation=2.29σ
+2026-04-07 21:41:28 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=6.7°C, ext=24.0°C, humidity=59.7%, deviation=2.29σ
+2026-04-07 21:41:28 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=76.6, vvm=36.226514, potency=0.0%, exposure=448min, anomaly=True, eta=None
+2026-04-07 21:41:28 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=76.6, vvm=36.226514, potency=0.0%, exposure=448min, anomaly=True, eta=None
+2026-04-07 21:41:32 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=5.8°C, ext=25.0°C, humidity=42.6%, deviation=2.44σ
+2026-04-07 21:41:32 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=5.8°C, ext=25.0°C, humidity=42.6%, deviation=2.44σ
+2026-04-07 21:41:32 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=68.1, vvm=36.247577, potency=0.0%, exposure=448min, anomaly=True, eta=1
+2026-04-07 21:41:32 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=68.1, vvm=36.247577, potency=0.0%, exposure=448min, anomaly=True, eta=1
+2026-04-07 21:41:32 | WARNING  | vaccine_monitor.trigger_engine | STATUS CHANGE DETECTED: CRITICAL → WARNING | Risk: 68.1, Temp: 5.81°C
+2026-04-07 21:41:32 | WARNING  | vaccine_monitor.trigger_engine | STATUS CHANGE DETECTED: CRITICAL → WARNING | Risk: 68.1, Temp: 5.81°C
+2026-04-07 21:41:32 | INFO     | vaccine_monitor.trigger_engine | Firing trigger actions...
+2026-04-07 21:41:32 | INFO     | vaccine_monitor.trigger_engine | Firing trigger actions...
+2026-04-07 21:41:32 | INFO     | vaccine_monitor.crud      | Incident recorded: CRITICAL → WARNING, id=183
+2026-04-07 21:41:32 | INFO     | vaccine_monitor.crud      | Incident recorded: CRITICAL → WARNING, id=183
+2026-04-07 21:41:32 | WARNING  | vaccine_monitor.sms_service | Fast2SMS API key not configured — SMS alert skipped (logged only)
+2026-04-07 21:41:32 | WARNING  | vaccine_monitor.sms_service | Fast2SMS API key not configured — SMS alert skipped (logged only)
+2026-04-07 21:41:32 | INFO     | vaccine_monitor.sms_service | [SMS WOULD SEND] ALERT: Vaccine storage WARNING. Risk: 68.1/100. Temp: 5.81°C.
+2026-04-07 21:41:32 | INFO     | vaccine_monitor.sms_service | [SMS WOULD SEND] ALERT: Vaccine storage WARNING. Risk: 68.1/100. Temp: 5.81°C.
+2026-04-07 21:41:32 | WARNING  | vaccine_monitor.report_service | Anthropic API key not configured — generating fallback report
+2026-04-07 21:41:32 | WARNING  | vaccine_monitor.report_service | Anthropic API key not configured — generating fallback report
+2026-04-07 21:41:32 | INFO     | vaccine_monitor.trigger_engine | All trigger actions completed for incident 183
+2026-04-07 21:41:32 | INFO     | vaccine_monitor.trigger_engine | All trigger actions completed for incident 183
+2026-04-07 21:41:35 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=52.3, vvm=36.267125, potency=0.0%, exposure=448min, anomaly=False, eta=None
+2026-04-07 21:41:35 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=52.3, vvm=36.267125, potency=0.0%, exposure=448min, anomaly=False, eta=None
+2026-04-07 21:41:38 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=59.9, vvm=36.288681, potency=0.0%, exposure=448min, anomaly=False, eta=None
+2026-04-07 21:41:38 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=59.9, vvm=36.288681, potency=0.0%, exposure=448min, anomaly=False, eta=None
+2026-04-07 21:41:41 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=50.2, vvm=36.307607, potency=0.0%, exposure=448min, anomaly=False, eta=None
+2026-04-07 21:41:41 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=50.2, vvm=36.307607, potency=0.0%, exposure=448min, anomaly=False, eta=None
+2026-04-07 21:41:44 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=54.6, vvm=36.327743, potency=0.0%, exposure=448min, anomaly=False, eta=None
+2026-04-07 21:41:44 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=54.6, vvm=36.327743, potency=0.0%, exposure=448min, anomaly=False, eta=None
+2026-04-07 21:41:47 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=51.4, vvm=36.346377, potency=0.0%, exposure=448min, anomaly=False, eta=None
+2026-04-07 21:41:47 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=51.4, vvm=36.346377, potency=0.0%, exposure=448min, anomaly=False, eta=None
+2026-04-07 21:41:50 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=51.4, vvm=36.365012, potency=0.0%, exposure=448min, anomaly=False, eta=None
+2026-04-07 21:41:50 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=51.4, vvm=36.365012, potency=0.0%, exposure=448min, anomaly=False, eta=None
+2026-04-07 21:41:53 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=54.9, vvm=36.382821, potency=0.0%, exposure=448min, anomaly=False, eta=None
+2026-04-07 21:41:53 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=54.9, vvm=36.382821, potency=0.0%, exposure=448min, anomaly=False, eta=None
+2026-04-07 21:41:56 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=52.6, vvm=36.401169, potency=0.0%, exposure=448min, anomaly=False, eta=None
+2026-04-07 21:41:56 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=52.6, vvm=36.401169, potency=0.0%, exposure=448min, anomaly=False, eta=None
+2026-04-07 21:41:59 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=52.7, vvm=36.419492, potency=0.0%, exposure=448min, anomaly=False, eta=None
+2026-04-07 21:41:59 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=52.7, vvm=36.419492, potency=0.0%, exposure=448min, anomaly=False, eta=None
+2026-04-07 21:42:02 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=52.5, vvm=36.437864, potency=0.0%, exposure=448min, anomaly=False, eta=None
+2026-04-07 21:42:02 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=52.5, vvm=36.437864, potency=0.0%, exposure=448min, anomaly=False, eta=None
+2026-04-07 21:42:05 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=51.4, vvm=36.457185, potency=0.0%, exposure=448min, anomaly=False, eta=None
+2026-04-07 21:42:05 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=51.4, vvm=36.457185, potency=0.0%, exposure=448min, anomaly=False, eta=None
+2026-04-07 21:42:08 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=36.493077, potency=0.0%, exposure=449min, anomaly=False, eta=None
+2026-04-07 21:42:08 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=36.493077, potency=0.0%, exposure=449min, anomaly=False, eta=None
+2026-04-07 21:42:08 | WARNING  | vaccine_monitor.trigger_engine | STATUS CHANGE DETECTED: WARNING → CRITICAL | Risk: 90.0, Temp: 10.02°C
+2026-04-07 21:42:08 | WARNING  | vaccine_monitor.trigger_engine | STATUS CHANGE DETECTED: WARNING → CRITICAL | Risk: 90.0, Temp: 10.02°C
+2026-04-07 21:42:08 | INFO     | vaccine_monitor.trigger_engine | Firing trigger actions...
+2026-04-07 21:42:08 | INFO     | vaccine_monitor.trigger_engine | Firing trigger actions...
+2026-04-07 21:42:08 | INFO     | vaccine_monitor.crud      | Incident recorded: WARNING → CRITICAL, id=184
+2026-04-07 21:42:08 | INFO     | vaccine_monitor.crud      | Incident recorded: WARNING → CRITICAL, id=184
+2026-04-07 21:42:08 | WARNING  | vaccine_monitor.sms_service | Fast2SMS API key not configured — SMS alert skipped (logged only)
+2026-04-07 21:42:08 | WARNING  | vaccine_monitor.sms_service | Fast2SMS API key not configured — SMS alert skipped (logged only)
+2026-04-07 21:42:08 | INFO     | vaccine_monitor.sms_service | [SMS WOULD SEND] ALERT: Vaccine storage CRITICAL. Risk: 90.0/100. Temp: 10.02°C.
+2026-04-07 21:42:08 | INFO     | vaccine_monitor.sms_service | [SMS WOULD SEND] ALERT: Vaccine storage CRITICAL. Risk: 90.0/100. Temp: 10.02°C.
+2026-04-07 21:42:08 | WARNING  | vaccine_monitor.report_service | Anthropic API key not configured — generating fallback report
+2026-04-07 21:42:08 | WARNING  | vaccine_monitor.report_service | Anthropic API key not configured — generating fallback report
+2026-04-07 21:42:08 | INFO     | vaccine_monitor.trigger_engine | All trigger actions completed for incident 184
+2026-04-07 21:42:08 | INFO     | vaccine_monitor.trigger_engine | All trigger actions completed for incident 184
+2026-04-07 21:42:11 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=53.3, vvm=36.512879, potency=0.0%, exposure=449min, anomaly=False, eta=None
+2026-04-07 21:42:11 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=53.3, vvm=36.512879, potency=0.0%, exposure=449min, anomaly=False, eta=None
+2026-04-07 21:42:11 | WARNING  | vaccine_monitor.trigger_engine | STATUS CHANGE DETECTED: CRITICAL → WARNING | Risk: 53.3, Temp: 5.33°C
+2026-04-07 21:42:11 | WARNING  | vaccine_monitor.trigger_engine | STATUS CHANGE DETECTED: CRITICAL → WARNING | Risk: 53.3, Temp: 5.33°C
+2026-04-07 21:42:11 | INFO     | vaccine_monitor.trigger_engine | Firing trigger actions...
+2026-04-07 21:42:11 | INFO     | vaccine_monitor.trigger_engine | Firing trigger actions...
+2026-04-07 21:42:11 | INFO     | vaccine_monitor.crud      | Incident recorded: CRITICAL → WARNING, id=185
+2026-04-07 21:42:11 | INFO     | vaccine_monitor.crud      | Incident recorded: CRITICAL → WARNING, id=185
+2026-04-07 21:42:11 | WARNING  | vaccine_monitor.sms_service | Fast2SMS API key not configured — SMS alert skipped (logged only)
+2026-04-07 21:42:11 | WARNING  | vaccine_monitor.sms_service | Fast2SMS API key not configured — SMS alert skipped (logged only)
+2026-04-07 21:42:11 | INFO     | vaccine_monitor.sms_service | [SMS WOULD SEND] ALERT: Vaccine storage WARNING. Risk: 53.3/100. Temp: 5.33°C.
+2026-04-07 21:42:11 | INFO     | vaccine_monitor.sms_service | [SMS WOULD SEND] ALERT: Vaccine storage WARNING. Risk: 53.3/100. Temp: 5.33°C.
+2026-04-07 21:42:11 | WARNING  | vaccine_monitor.report_service | Anthropic API key not configured — generating fallback report
+2026-04-07 21:42:11 | WARNING  | vaccine_monitor.report_service | Anthropic API key not configured — generating fallback report
+2026-04-07 21:42:11 | INFO     | vaccine_monitor.trigger_engine | All trigger actions completed for incident 185
+2026-04-07 21:42:11 | INFO     | vaccine_monitor.trigger_engine | All trigger actions completed for incident 185
+2026-04-07 21:42:14 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=51.6, vvm=36.531465, potency=0.0%, exposure=449min, anomaly=False, eta=None
+2026-04-07 21:42:14 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=51.6, vvm=36.531465, potency=0.0%, exposure=449min, anomaly=False, eta=None
+2026-04-07 21:42:17 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=55.5, vvm=36.551836, potency=0.0%, exposure=449min, anomaly=False, eta=1
+2026-04-07 21:42:17 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=55.5, vvm=36.551836, potency=0.0%, exposure=449min, anomaly=False, eta=1
+2026-04-07 21:42:20 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=52.0, vvm=36.571308, potency=0.0%, exposure=449min, anomaly=False, eta=None
+2026-04-07 21:42:20 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=52.0, vvm=36.571308, potency=0.0%, exposure=449min, anomaly=False, eta=None
+2026-04-07 21:42:23 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=51.4, vvm=36.589942, potency=0.0%, exposure=449min, anomaly=False, eta=None
+2026-04-07 21:42:23 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=51.4, vvm=36.589942, potency=0.0%, exposure=449min, anomaly=False, eta=None
+2026-04-07 21:42:26 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=51.5, vvm=36.608553, potency=0.0%, exposure=449min, anomaly=False, eta=None
+2026-04-07 21:42:26 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=51.5, vvm=36.608553, potency=0.0%, exposure=449min, anomaly=False, eta=None
+2026-04-07 21:42:29 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=54.5, vvm=36.626455, potency=0.0%, exposure=449min, anomaly=False, eta=None
+2026-04-07 21:42:29 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=54.5, vvm=36.626455, potency=0.0%, exposure=449min, anomaly=False, eta=None
+2026-04-07 21:42:32 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=51.5, vvm=36.645065, potency=0.0%, exposure=449min, anomaly=False, eta=None
+2026-04-07 21:42:32 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=51.5, vvm=36.645065, potency=0.0%, exposure=449min, anomaly=False, eta=None
+2026-04-07 21:42:35 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=36.680424, potency=0.0%, exposure=450min, anomaly=False, eta=None
+2026-04-07 21:42:35 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=36.680424, potency=0.0%, exposure=450min, anomaly=False, eta=None
+2026-04-07 21:42:35 | WARNING  | vaccine_monitor.trigger_engine | STATUS CHANGE DETECTED: WARNING → CRITICAL | Risk: 90.0, Temp: 9.9°C
+2026-04-07 21:42:35 | WARNING  | vaccine_monitor.trigger_engine | STATUS CHANGE DETECTED: WARNING → CRITICAL | Risk: 90.0, Temp: 9.9°C
+2026-04-07 21:42:35 | INFO     | vaccine_monitor.trigger_engine | Firing trigger actions...
+2026-04-07 21:42:35 | INFO     | vaccine_monitor.trigger_engine | Firing trigger actions...
+2026-04-07 21:42:35 | INFO     | vaccine_monitor.crud      | Incident recorded: WARNING → CRITICAL, id=186
+2026-04-07 21:42:35 | INFO     | vaccine_monitor.crud      | Incident recorded: WARNING → CRITICAL, id=186
+2026-04-07 21:42:35 | WARNING  | vaccine_monitor.sms_service | Fast2SMS API key not configured — SMS alert skipped (logged only)
+2026-04-07 21:42:35 | WARNING  | vaccine_monitor.sms_service | Fast2SMS API key not configured — SMS alert skipped (logged only)
+2026-04-07 21:42:35 | INFO     | vaccine_monitor.sms_service | [SMS WOULD SEND] ALERT: Vaccine storage CRITICAL. Risk: 90.0/100. Temp: 9.9°C.
+2026-04-07 21:42:35 | INFO     | vaccine_monitor.sms_service | [SMS WOULD SEND] ALERT: Vaccine storage CRITICAL. Risk: 90.0/100. Temp: 9.9°C.
+2026-04-07 21:42:35 | WARNING  | vaccine_monitor.report_service | Anthropic API key not configured — generating fallback report
+2026-04-07 21:42:35 | WARNING  | vaccine_monitor.report_service | Anthropic API key not configured — generating fallback report
+2026-04-07 21:42:35 | INFO     | vaccine_monitor.trigger_engine | All trigger actions completed for incident 186
+2026-04-07 21:42:35 | INFO     | vaccine_monitor.trigger_engine | All trigger actions completed for incident 186
+2026-04-07 21:42:38 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=51.7, vvm=36.699821, potency=0.0%, exposure=450min, anomaly=False, eta=None
+2026-04-07 21:42:38 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=51.7, vvm=36.699821, potency=0.0%, exposure=450min, anomaly=False, eta=None
+2026-04-07 21:42:38 | WARNING  | vaccine_monitor.trigger_engine | STATUS CHANGE DETECTED: CRITICAL → WARNING | Risk: 51.7, Temp: 5.17°C
+2026-04-07 21:42:38 | WARNING  | vaccine_monitor.trigger_engine | STATUS CHANGE DETECTED: CRITICAL → WARNING | Risk: 51.7, Temp: 5.17°C
+2026-04-07 21:42:38 | INFO     | vaccine_monitor.trigger_engine | Firing trigger actions...
+2026-04-07 21:42:38 | INFO     | vaccine_monitor.trigger_engine | Firing trigger actions...
+2026-04-07 21:42:38 | INFO     | vaccine_monitor.crud      | Incident recorded: CRITICAL → WARNING, id=187
+2026-04-07 21:42:38 | INFO     | vaccine_monitor.crud      | Incident recorded: CRITICAL → WARNING, id=187
+2026-04-07 21:42:38 | WARNING  | vaccine_monitor.sms_service | Fast2SMS API key not configured — SMS alert skipped (logged only)
+2026-04-07 21:42:38 | WARNING  | vaccine_monitor.sms_service | Fast2SMS API key not configured — SMS alert skipped (logged only)
+2026-04-07 21:42:38 | INFO     | vaccine_monitor.sms_service | [SMS WOULD SEND] ALERT: Vaccine storage WARNING. Risk: 51.7/100. Temp: 5.17°C.
+2026-04-07 21:42:38 | INFO     | vaccine_monitor.sms_service | [SMS WOULD SEND] ALERT: Vaccine storage WARNING. Risk: 51.7/100. Temp: 5.17°C.
+2026-04-07 21:42:38 | WARNING  | vaccine_monitor.report_service | Anthropic API key not configured — generating fallback report
+2026-04-07 21:42:38 | WARNING  | vaccine_monitor.report_service | Anthropic API key not configured — generating fallback report
+2026-04-07 21:42:38 | INFO     | vaccine_monitor.trigger_engine | All trigger actions completed for incident 187
+2026-04-07 21:42:38 | INFO     | vaccine_monitor.trigger_engine | All trigger actions completed for incident 187
+2026-04-07 21:42:41 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=50.5, vvm=36.718674, potency=0.0%, exposure=450min, anomaly=False, eta=None
+2026-04-07 21:42:41 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=50.5, vvm=36.718674, potency=0.0%, exposure=450min, anomaly=False, eta=None
+2026-04-07 21:42:44 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=51.7, vvm=36.737236, potency=0.0%, exposure=450min, anomaly=False, eta=None
+2026-04-07 21:42:44 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=51.7, vvm=36.737236, potency=0.0%, exposure=450min, anomaly=False, eta=None
+2026-04-07 21:42:47 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=61.4, vvm=36.753602, potency=0.0%, exposure=450min, anomaly=False, eta=2
+2026-04-07 21:42:47 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=61.4, vvm=36.753602, potency=0.0%, exposure=450min, anomaly=False, eta=2
+2026-04-07 21:42:50 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=54.2, vvm=36.773634, potency=0.0%, exposure=450min, anomaly=False, eta=None
+2026-04-07 21:42:50 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=54.2, vvm=36.773634, potency=0.0%, exposure=450min, anomaly=False, eta=None
+2026-04-07 21:42:53 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=52.0, vvm=36.792125, potency=0.0%, exposure=450min, anomaly=False, eta=None
+2026-04-07 21:42:53 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=52.0, vvm=36.792125, potency=0.0%, exposure=450min, anomaly=False, eta=None
+2026-04-07 21:42:56 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=56.8, vvm=36.809499, potency=0.0%, exposure=450min, anomaly=False, eta=1
+2026-04-07 21:42:56 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=56.8, vvm=36.809499, potency=0.0%, exposure=450min, anomaly=False, eta=1
+2026-04-07 21:42:59 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=36.844376, potency=0.0%, exposure=451min, anomaly=False, eta=None
+2026-04-07 21:42:59 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=90.0, vvm=36.844376, potency=0.0%, exposure=451min, anomaly=False, eta=None
+2026-04-07 21:42:59 | WARNING  | vaccine_monitor.trigger_engine | STATUS CHANGE DETECTED: WARNING → CRITICAL | Risk: 90.0, Temp: 9.79°C
+2026-04-07 21:42:59 | WARNING  | vaccine_monitor.trigger_engine | STATUS CHANGE DETECTED: WARNING → CRITICAL | Risk: 90.0, Temp: 9.79°C
+2026-04-07 21:42:59 | INFO     | vaccine_monitor.trigger_engine | Firing trigger actions...
+2026-04-07 21:42:59 | INFO     | vaccine_monitor.trigger_engine | Firing trigger actions...
+2026-04-07 21:42:59 | INFO     | vaccine_monitor.crud      | Incident recorded: WARNING → CRITICAL, id=188
+2026-04-07 21:42:59 | INFO     | vaccine_monitor.crud      | Incident recorded: WARNING → CRITICAL, id=188
+2026-04-07 21:42:59 | WARNING  | vaccine_monitor.sms_service | Fast2SMS API key not configured — SMS alert skipped (logged only)
+2026-04-07 21:42:59 | WARNING  | vaccine_monitor.sms_service | Fast2SMS API key not configured — SMS alert skipped (logged only)
+2026-04-07 21:42:59 | INFO     | vaccine_monitor.sms_service | [SMS WOULD SEND] ALERT: Vaccine storage CRITICAL. Risk: 90.0/100. Temp: 9.79°C.
+2026-04-07 21:42:59 | INFO     | vaccine_monitor.sms_service | [SMS WOULD SEND] ALERT: Vaccine storage CRITICAL. Risk: 90.0/100. Temp: 9.79°C.
+2026-04-07 21:42:59 | WARNING  | vaccine_monitor.report_service | Anthropic API key not configured — generating fallback report
+2026-04-07 21:42:59 | WARNING  | vaccine_monitor.report_service | Anthropic API key not configured — generating fallback report
+2026-04-07 21:42:59 | INFO     | vaccine_monitor.trigger_engine | All trigger actions completed for incident 188
+2026-04-07 21:42:59 | INFO     | vaccine_monitor.trigger_engine | All trigger actions completed for incident 188
+2026-04-07 21:43:02 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=53.3, vvm=36.864177, potency=0.0%, exposure=451min, anomaly=False, eta=None
+2026-04-07 21:43:02 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=53.3, vvm=36.864177, potency=0.0%, exposure=451min, anomaly=False, eta=None
+2026-04-07 21:43:02 | WARNING  | vaccine_monitor.trigger_engine | STATUS CHANGE DETECTED: CRITICAL → WARNING | Risk: 53.3, Temp: 5.33°C
+2026-04-07 21:43:02 | WARNING  | vaccine_monitor.trigger_engine | STATUS CHANGE DETECTED: CRITICAL → WARNING | Risk: 53.3, Temp: 5.33°C
+2026-04-07 21:43:02 | INFO     | vaccine_monitor.trigger_engine | Firing trigger actions...
+2026-04-07 21:43:02 | INFO     | vaccine_monitor.trigger_engine | Firing trigger actions...
+2026-04-07 21:43:02 | INFO     | vaccine_monitor.crud      | Incident recorded: CRITICAL → WARNING, id=189
+2026-04-07 21:43:02 | INFO     | vaccine_monitor.crud      | Incident recorded: CRITICAL → WARNING, id=189
+2026-04-07 21:43:02 | WARNING  | vaccine_monitor.sms_service | Fast2SMS API key not configured — SMS alert skipped (logged only)
+2026-04-07 21:43:02 | WARNING  | vaccine_monitor.sms_service | Fast2SMS API key not configured — SMS alert skipped (logged only)
+2026-04-07 21:43:02 | INFO     | vaccine_monitor.sms_service | [SMS WOULD SEND] ALERT: Vaccine storage WARNING. Risk: 53.3/100. Temp: 5.33°C.
+2026-04-07 21:43:02 | INFO     | vaccine_monitor.sms_service | [SMS WOULD SEND] ALERT: Vaccine storage WARNING. Risk: 53.3/100. Temp: 5.33°C.
+2026-04-07 21:43:02 | WARNING  | vaccine_monitor.report_service | Anthropic API key not configured — generating fallback report
+2026-04-07 21:43:02 | WARNING  | vaccine_monitor.report_service | Anthropic API key not configured — generating fallback report
+2026-04-07 21:43:02 | INFO     | vaccine_monitor.trigger_engine | All trigger actions completed for incident 189
+2026-04-07 21:43:02 | INFO     | vaccine_monitor.trigger_engine | All trigger actions completed for incident 189
+2026-04-07 21:43:05 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=54.7, vvm=36.882032, potency=0.0%, exposure=451min, anomaly=False, eta=None
+2026-04-07 21:43:05 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=54.7, vvm=36.882032, potency=0.0%, exposure=451min, anomaly=False, eta=None
+2026-04-07 21:43:09 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=53.9, vvm=36.901987, potency=0.0%, exposure=451min, anomaly=False, eta=None
+2026-04-07 21:43:09 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=53.9, vvm=36.901987, potency=0.0%, exposure=451min, anomaly=False, eta=None
+2026-04-07 21:43:12 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=53.5, vvm=36.921839, potency=0.0%, exposure=451min, anomaly=False, eta=None
+2026-04-07 21:43:12 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=53.5, vvm=36.921839, potency=0.0%, exposure=451min, anomaly=False, eta=None
+2026-04-07 21:43:15 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=50.4, vvm=36.940913, potency=0.0%, exposure=451min, anomaly=False, eta=None
+2026-04-07 21:43:15 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=50.4, vvm=36.940913, potency=0.0%, exposure=451min, anomaly=False, eta=None
+2026-04-07 21:43:18 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=56.9, vvm=36.961654, potency=0.0%, exposure=451min, anomaly=False, eta=1
+2026-04-07 21:43:18 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=56.9, vvm=36.961654, potency=0.0%, exposure=451min, anomaly=False, eta=1
+2026-04-07 21:43:21 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=56.8, vvm=36.982368, potency=0.0%, exposure=451min, anomaly=False, eta=1
+2026-04-07 21:43:21 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=56.8, vvm=36.982368, potency=0.0%, exposure=451min, anomaly=False, eta=1
+2026-04-07 21:43:24 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=6.6°C, ext=27.1°C, humidity=56.0%, deviation=0.24σ
+2026-04-07 21:43:24 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=6.6°C, ext=27.1°C, humidity=56.0%, deviation=0.24σ
+2026-04-07 21:43:24 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=76.1, vvm=37.005705, potency=0.0%, exposure=451min, anomaly=True, eta=None
+2026-04-07 21:43:24 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=76.1, vvm=37.005705, potency=0.0%, exposure=451min, anomaly=True, eta=None
+2026-04-07 21:43:24 | WARNING  | vaccine_monitor.trigger_engine | STATUS CHANGE DETECTED: WARNING → CRITICAL | Risk: 76.1, Temp: 6.61°C
+2026-04-07 21:43:24 | WARNING  | vaccine_monitor.trigger_engine | STATUS CHANGE DETECTED: WARNING → CRITICAL | Risk: 76.1, Temp: 6.61°C
+2026-04-07 21:43:24 | INFO     | vaccine_monitor.trigger_engine | Firing trigger actions...
+2026-04-07 21:43:24 | INFO     | vaccine_monitor.trigger_engine | Firing trigger actions...
+2026-04-07 21:43:24 | INFO     | vaccine_monitor.crud      | Incident recorded: WARNING → CRITICAL, id=190
+2026-04-07 21:43:24 | INFO     | vaccine_monitor.crud      | Incident recorded: WARNING → CRITICAL, id=190
+2026-04-07 21:43:24 | WARNING  | vaccine_monitor.sms_service | Fast2SMS API key not configured — SMS alert skipped (logged only)
+2026-04-07 21:43:24 | WARNING  | vaccine_monitor.sms_service | Fast2SMS API key not configured — SMS alert skipped (logged only)
+2026-04-07 21:43:24 | INFO     | vaccine_monitor.sms_service | [SMS WOULD SEND] ALERT: Vaccine storage CRITICAL. Risk: 76.1/100. Temp: 6.61°C.
+2026-04-07 21:43:24 | INFO     | vaccine_monitor.sms_service | [SMS WOULD SEND] ALERT: Vaccine storage CRITICAL. Risk: 76.1/100. Temp: 6.61°C.
+2026-04-07 21:43:24 | WARNING  | vaccine_monitor.report_service | Anthropic API key not configured — generating fallback report
+2026-04-07 21:43:24 | WARNING  | vaccine_monitor.report_service | Anthropic API key not configured — generating fallback report
+2026-04-07 21:43:24 | INFO     | vaccine_monitor.trigger_engine | All trigger actions completed for incident 190
+2026-04-07 21:43:24 | INFO     | vaccine_monitor.trigger_engine | All trigger actions completed for incident 190
+2026-04-07 21:43:27 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=6.3°C, ext=29.2°C, humidity=61.9%, deviation=0.10σ
+2026-04-07 21:43:27 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=6.3°C, ext=29.2°C, humidity=61.9%, deviation=0.10σ
+2026-04-07 21:43:27 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=72.7, vvm=37.028049, potency=0.0%, exposure=451min, anomaly=True, eta=None
+2026-04-07 21:43:27 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=72.7, vvm=37.028049, potency=0.0%, exposure=451min, anomaly=True, eta=None
+2026-04-07 21:43:30 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=70.6, vvm=37.052765, potency=0.0%, exposure=451min, anomaly=False, eta=None
+2026-04-07 21:43:30 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=70.6, vvm=37.052765, potency=0.0%, exposure=451min, anomaly=False, eta=None
+2026-04-07 21:43:33 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=75.3, vvm=37.079003, potency=0.0%, exposure=451min, anomaly=False, eta=None
+2026-04-07 21:43:33 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=75.3, vvm=37.079003, potency=0.0%, exposure=451min, anomaly=False, eta=None
+2026-04-07 21:43:36 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=8.1°C, ext=22.0°C, humidity=62.0%, deviation=1.35σ
+2026-04-07 21:43:36 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=8.1°C, ext=22.0°C, humidity=62.0%, deviation=1.35σ
+2026-04-07 21:43:36 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=91.3, vvm=37.107313, potency=0.0%, exposure=452min, anomaly=True, eta=None
+2026-04-07 21:43:36 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=91.3, vvm=37.107313, potency=0.0%, exposure=452min, anomaly=True, eta=None
+2026-04-07 21:43:39 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=86.7, vvm=37.137619, potency=0.0%, exposure=453min, anomaly=False, eta=None
+2026-04-07 21:43:39 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=86.7, vvm=37.137619, potency=0.0%, exposure=453min, anomaly=False, eta=None
+2026-04-07 21:43:42 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=85.1, vvm=37.167320, potency=0.0%, exposure=454min, anomaly=False, eta=None
+2026-04-07 21:43:42 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=85.1, vvm=37.167320, potency=0.0%, exposure=454min, anomaly=False, eta=None
+2026-04-07 21:43:45 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=8.2°C, ext=24.5°C, humidity=61.0%, deviation=1.44σ
+2026-04-07 21:43:45 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=8.2°C, ext=24.5°C, humidity=61.0%, deviation=1.44σ
+2026-04-07 21:43:45 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=92.3, vvm=37.195990, potency=0.0%, exposure=455min, anomaly=True, eta=None
+2026-04-07 21:43:45 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=92.3, vvm=37.195990, potency=0.0%, exposure=455min, anomaly=True, eta=None
+2026-04-07 21:43:48 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=82.7, vvm=37.224805, potency=0.0%, exposure=456min, anomaly=False, eta=None
+2026-04-07 21:43:48 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=82.7, vvm=37.224805, potency=0.0%, exposure=456min, anomaly=False, eta=None
+2026-04-07 21:43:51 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=8.4°C, ext=24.6°C, humidity=61.7%, deviation=1.52σ
+2026-04-07 21:43:51 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=8.4°C, ext=24.6°C, humidity=61.7%, deviation=1.52σ
+2026-04-07 21:43:51 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=93.9, vvm=37.254060, potency=0.0%, exposure=457min, anomaly=True, eta=None
+2026-04-07 21:43:51 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=93.9, vvm=37.254060, potency=0.0%, exposure=457min, anomaly=True, eta=None
+2026-04-07 21:43:54 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=78.6, vvm=37.281420, potency=0.0%, exposure=457min, anomaly=False, eta=None
+2026-04-07 21:43:54 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=78.6, vvm=37.281420, potency=0.0%, exposure=457min, anomaly=False, eta=None
+2026-04-07 21:43:57 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=72.5, vvm=37.306741, potency=0.0%, exposure=457min, anomaly=False, eta=None
+2026-04-07 21:43:57 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=72.5, vvm=37.306741, potency=0.0%, exposure=457min, anomaly=False, eta=None
+2026-04-07 21:44:00 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=69.5, vvm=37.331113, potency=0.0%, exposure=457min, anomaly=False, eta=1
+2026-04-07 21:44:00 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=69.5, vvm=37.331113, potency=0.0%, exposure=457min, anomaly=False, eta=1
+2026-04-07 21:44:00 | WARNING  | vaccine_monitor.trigger_engine | STATUS CHANGE DETECTED: CRITICAL → WARNING | Risk: 69.5, Temp: 6.95°C
+2026-04-07 21:44:00 | WARNING  | vaccine_monitor.trigger_engine | STATUS CHANGE DETECTED: CRITICAL → WARNING | Risk: 69.5, Temp: 6.95°C
+2026-04-07 21:44:00 | INFO     | vaccine_monitor.trigger_engine | Firing trigger actions...
+2026-04-07 21:44:00 | INFO     | vaccine_monitor.trigger_engine | Firing trigger actions...
+2026-04-07 21:44:00 | INFO     | vaccine_monitor.crud      | Incident recorded: CRITICAL → WARNING, id=191
+2026-04-07 21:44:00 | INFO     | vaccine_monitor.crud      | Incident recorded: CRITICAL → WARNING, id=191
+2026-04-07 21:44:00 | WARNING  | vaccine_monitor.sms_service | Fast2SMS API key not configured — SMS alert skipped (logged only)
+2026-04-07 21:44:00 | WARNING  | vaccine_monitor.sms_service | Fast2SMS API key not configured — SMS alert skipped (logged only)
+2026-04-07 21:44:00 | INFO     | vaccine_monitor.sms_service | [SMS WOULD SEND] ALERT: Vaccine storage WARNING. Risk: 69.5/100. Temp: 6.95°C.
+2026-04-07 21:44:00 | INFO     | vaccine_monitor.sms_service | [SMS WOULD SEND] ALERT: Vaccine storage WARNING. Risk: 69.5/100. Temp: 6.95°C.
+2026-04-07 21:44:00 | WARNING  | vaccine_monitor.report_service | Anthropic API key not configured — generating fallback report
+2026-04-07 21:44:00 | WARNING  | vaccine_monitor.report_service | Anthropic API key not configured — generating fallback report
+2026-04-07 21:44:00 | INFO     | vaccine_monitor.trigger_engine | All trigger actions completed for incident 191
+2026-04-07 21:44:00 | INFO     | vaccine_monitor.trigger_engine | All trigger actions completed for incident 191
+2026-04-07 21:44:03 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=6.5°C, ext=25.8°C, humidity=60.7%, deviation=0.26σ
+2026-04-07 21:44:03 | INFO     | vaccine_monitor.anomaly_detector | ANOMALY DETECTED: temp=6.5°C, ext=25.8°C, humidity=60.7%, deviation=0.26σ
+2026-04-07 21:44:03 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=74.5, vvm=37.353977, potency=0.0%, exposure=457min, anomaly=True, eta=None
+2026-04-07 21:44:03 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=CRITICAL, risk=74.5, vvm=37.353977, potency=0.0%, exposure=457min, anomaly=True, eta=None
+2026-04-07 21:44:03 | WARNING  | vaccine_monitor.trigger_engine | STATUS CHANGE DETECTED: WARNING → CRITICAL | Risk: 74.5, Temp: 6.45°C
+2026-04-07 21:44:03 | WARNING  | vaccine_monitor.trigger_engine | STATUS CHANGE DETECTED: WARNING → CRITICAL | Risk: 74.5, Temp: 6.45°C
+2026-04-07 21:44:03 | INFO     | vaccine_monitor.trigger_engine | Firing trigger actions...
+2026-04-07 21:44:03 | INFO     | vaccine_monitor.trigger_engine | Firing trigger actions...
+2026-04-07 21:44:03 | INFO     | vaccine_monitor.crud      | Incident recorded: WARNING → CRITICAL, id=192
+2026-04-07 21:44:03 | INFO     | vaccine_monitor.crud      | Incident recorded: WARNING → CRITICAL, id=192
+2026-04-07 21:44:03 | WARNING  | vaccine_monitor.sms_service | Fast2SMS API key not configured — SMS alert skipped (logged only)
+2026-04-07 21:44:03 | WARNING  | vaccine_monitor.sms_service | Fast2SMS API key not configured — SMS alert skipped (logged only)
+2026-04-07 21:44:03 | INFO     | vaccine_monitor.sms_service | [SMS WOULD SEND] ALERT: Vaccine storage CRITICAL. Risk: 74.5/100. Temp: 6.45°C.
+2026-04-07 21:44:03 | INFO     | vaccine_monitor.sms_service | [SMS WOULD SEND] ALERT: Vaccine storage CRITICAL. Risk: 74.5/100. Temp: 6.45°C.
+2026-04-07 21:44:03 | WARNING  | vaccine_monitor.report_service | Anthropic API key not configured — generating fallback report
+2026-04-07 21:44:03 | WARNING  | vaccine_monitor.report_service | Anthropic API key not configured — generating fallback report
+2026-04-07 21:44:04 | INFO     | vaccine_monitor.trigger_engine | All trigger actions completed for incident 192
+2026-04-07 21:44:04 | INFO     | vaccine_monitor.trigger_engine | All trigger actions completed for incident 192
+2026-04-07 21:44:07 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=58.7, vvm=37.375204, potency=0.0%, exposure=457min, anomaly=False, eta=None
+2026-04-07 21:44:07 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=58.7, vvm=37.375204, potency=0.0%, exposure=457min, anomaly=False, eta=None
+2026-04-07 21:44:07 | WARNING  | vaccine_monitor.trigger_engine | STATUS CHANGE DETECTED: CRITICAL → WARNING | Risk: 58.7, Temp: 5.87°C
+2026-04-07 21:44:07 | WARNING  | vaccine_monitor.trigger_engine | STATUS CHANGE DETECTED: CRITICAL → WARNING | Risk: 58.7, Temp: 5.87°C
+2026-04-07 21:44:07 | INFO     | vaccine_monitor.trigger_engine | Firing trigger actions...
+2026-04-07 21:44:07 | INFO     | vaccine_monitor.trigger_engine | Firing trigger actions...
+2026-04-07 21:44:07 | INFO     | vaccine_monitor.crud      | Incident recorded: CRITICAL → WARNING, id=193
+2026-04-07 21:44:07 | INFO     | vaccine_monitor.crud      | Incident recorded: CRITICAL → WARNING, id=193
+2026-04-07 21:44:07 | WARNING  | vaccine_monitor.sms_service | Fast2SMS API key not configured — SMS alert skipped (logged only)
+2026-04-07 21:44:07 | WARNING  | vaccine_monitor.sms_service | Fast2SMS API key not configured — SMS alert skipped (logged only)
+2026-04-07 21:44:07 | INFO     | vaccine_monitor.sms_service | [SMS WOULD SEND] ALERT: Vaccine storage WARNING. Risk: 58.7/100. Temp: 5.87°C.
+2026-04-07 21:44:07 | INFO     | vaccine_monitor.sms_service | [SMS WOULD SEND] ALERT: Vaccine storage WARNING. Risk: 58.7/100. Temp: 5.87°C.
+2026-04-07 21:44:07 | WARNING  | vaccine_monitor.report_service | Anthropic API key not configured — generating fallback report
+2026-04-07 21:44:07 | WARNING  | vaccine_monitor.report_service | Anthropic API key not configured — generating fallback report
+2026-04-07 21:44:07 | INFO     | vaccine_monitor.trigger_engine | All trigger actions completed for incident 193
+2026-04-07 21:44:07 | INFO     | vaccine_monitor.trigger_engine | All trigger actions completed for incident 193
+2026-04-07 21:44:10 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=55.7, vvm=37.395627, potency=0.0%, exposure=457min, anomaly=False, eta=1
+2026-04-07 21:44:10 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=55.7, vvm=37.395627, potency=0.0%, exposure=457min, anomaly=False, eta=1
+2026-04-07 21:44:13 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=58.1, vvm=37.416690, potency=0.0%, exposure=457min, anomaly=False, eta=None
+2026-04-07 21:44:13 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=58.1, vvm=37.416690, potency=0.0%, exposure=457min, anomaly=False, eta=None
+2026-04-07 21:44:16 | INFO     | vaccine_monitor.simulator | Simulator cycle 6 complete. Looping back to start...
+2026-04-07 21:44:16 | INFO     | vaccine_monitor.simulator | Simulator cycle 6 complete. Looping back to start...
+2026-04-07 21:44:16 | INFO     | vaccine_monitor.simulator | Simulator cycle 7: reading simulation/sample_data.csv
+2026-04-07 21:44:16 | INFO     | vaccine_monitor.simulator | Simulator cycle 7: reading simulation/sample_data.csv
+2026-04-07 21:44:16 | INFO     | vaccine_monitor.simulator | Loaded 200 rows from CSV
+2026-04-07 21:44:16 | INFO     | vaccine_monitor.simulator | Loaded 200 rows from CSV
+2026-04-07 21:44:16 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=55.7, vvm=37.434315, potency=0.0%, exposure=457min, anomaly=False, eta=1
+2026-04-07 21:44:16 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=55.7, vvm=37.434315, potency=0.0%, exposure=457min, anomaly=False, eta=1
+2026-04-07 21:44:19 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=51.5, vvm=37.452926, potency=0.0%, exposure=457min, anomaly=False, eta=None
+2026-04-07 21:44:19 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=51.5, vvm=37.452926, potency=0.0%, exposure=457min, anomaly=False, eta=None
+2026-04-07 21:44:22 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=53.3, vvm=37.471108, potency=0.0%, exposure=457min, anomaly=False, eta=None
+2026-04-07 21:44:22 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=53.3, vvm=37.471108, potency=0.0%, exposure=457min, anomaly=False, eta=None
+2026-04-07 21:44:25 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=54.4, vvm=37.489032, potency=0.0%, exposure=457min, anomaly=False, eta=None
+2026-04-07 21:44:25 | INFO     | vaccine_monitor.pipeline  | Pipeline complete: status=WARNING, risk=54.4, vvm=37.489032, potency=0.0%, exposure=457min, anomaly=False, eta=None
