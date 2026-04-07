@@ -6,6 +6,9 @@ The Smart Vaccine Monitoring System is a real-time IoT + AI solution for vaccine
 
 The system addresses a critical global health challenge: ensuring vaccine potency through proper cold-chain management. The WHO estimates that up to 50% of vaccines are wasted globally, partly due to temperature excursions during storage and transport. This system provides real-time monitoring, predictive analytics, and automated compliance reporting to prevent vaccine wastage.
 
+ cd smart-vaccine-monitor
+ venv\Scripts\python.exe -m uvicorn main:app --host 0.0.0.0 --port 8000
+
 ## Architecture
 
 ```
