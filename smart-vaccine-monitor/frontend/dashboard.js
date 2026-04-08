@@ -18,9 +18,14 @@ const MAX_TABLE_ROWS = 10;
 let ws = null;
 let reconnectDelay = 1000;
 const maxReconnectDelay = 30000;
-let chartInstance = null;
+let tempChart = null;
+let humidityChart = null;
+let riskChart = null;
 let chartLabels = [];
 let chartTempData = [];
+let chartHumData = [];
+let chartRiskData = [];
+let chartDamageData = [];
 let chartSafeMaxData = [];
 let chartSafeMinData = [];
 let previousStatus = null;
@@ -151,9 +156,11 @@ async function fetchInitialData() {
 
         if (readings && readings.length > 0) {
             readings.forEach(r => {
-                addChartPoint(r.timestamp, r.temp_internal);
+                addChartPoint(r);
             });
-            chartInstance.update('none');
+            if (tempChart) tempChart.update('none');
+            if (humidityChart) humidityChart.update('none');
+            if (riskChart) riskChart.update('none');
 
             const latest = readings[readings.length - 1];
             handleDataUpdate(latest);
@@ -284,7 +291,7 @@ function handleDataUpdate(data) {
     updateVVM(data);
     updateETA(data);
     updateHumidity(data);
-    addChartPoint(data.timestamp, data.temp_internal);
+    addChartPoint(data);
     addTableRow(data);
 
     // Status change detection → toast + flash
@@ -488,146 +495,103 @@ function updateHumidity(data) {
 // CHART.JS (Enhanced with gradient fill)
 // ============================================================
 function initChart() {
-    const ctx = document.getElementById('temp-chart').getContext('2d');
+    // Shared chart options logic
+    const commonOptions = {
+        responsive: true, maintainAspectRatio: false,
+        animation: { duration: 800, easing: 'easeOutQuart' },
+        interaction: { mode: 'index', intersect: false },
+        plugins: { 
+            legend: { display: false },
+            tooltip: {
+                backgroundColor: 'rgba(26, 26, 26, 0.95)',
+                titleColor: '#FFFFFF',
+                bodyColor: '#FFC107',
+                borderColor: '#2A2A2A',
+                borderWidth: 1,
+                titleFont: { family: 'Rajdhani', weight: '600', size: 14 },
+                bodyFont: { family: 'JetBrains Mono', size: 13 },
+            }
+        },
+        scales: {
+            x: { display: true, grid: { display: false }, ticks: { color: 'rgba(156, 163, 175, 0.6)', font: { family: 'Rajdhani', size: 10 } } },
+            y: { display: true, grid: { color: 'rgba(31, 41, 55, 0.5)' }, ticks: { color: 'rgba(156, 163, 175, 0.8)', font: { family: 'Rajdhani', size: 11 } } }
+        }
+    };
 
-    // Create deep immersive gradient fill
-    const gradient = ctx.createLinearGradient(0, 0, 0, 320);
-    // Use the CSS custom variable or fallback to a soft glow
-    gradient.addColorStop(0, 'rgba(255, 255, 255, 0.4)');
-    gradient.addColorStop(0.5, 'rgba(255, 255, 255, 0.1)');
-    gradient.addColorStop(1, 'rgba(255, 255, 255, 0.0)');
-
-    chartInstance = new Chart(ctx, {
+    // Temp Chart
+    const ctxTemp = document.getElementById('temp-chart').getContext('2d');
+    const gradTemp = ctxTemp.createLinearGradient(0, 0, 0, 220);
+    gradTemp.addColorStop(0, 'rgba(255, 193, 7, 0.4)');
+    gradTemp.addColorStop(1, 'rgba(255, 193, 7, 0.0)');
+    tempChart = new Chart(ctxTemp, {
         type: 'line',
         data: {
             labels: chartLabels,
             datasets: [
-                {
-                    label: 'Internal Temp (°C)',
-                    data: chartTempData,
-                    borderColor: '#ffffff', // Stark white premium line
-                    backgroundColor: gradient,
-                    borderWidth: 3, // slightly thicker
-                    fill: true,
-                    tension: 0.5, // Buttery smooth curves
-                    pointRadius: 0,
-                    pointHoverRadius: 8,
-                    pointHoverBackgroundColor: '#ffffff',
-                    pointHoverBorderColor: 'rgba(255,255,255,0.3)',
-                    pointHoverBorderWidth: 6,
-                },
-                {
-                    label: 'Safe Max (8°C)',
-                    data: chartSafeMaxData,
-                    borderColor: 'rgba(251, 113, 133, 0.3)', // Red
-                    borderWidth: 1.5,
-                    borderDash: [5, 5],
-                    fill: false,
-                    pointRadius: 0,
-                    pointHoverRadius: 0,
-                },
-                {
-                    label: 'Safe Min (2°C)',
-                    data: chartSafeMinData,
-                    borderColor: 'rgba(96, 165, 250, 0.3)', // Blue
-                    borderWidth: 1.5,
-                    borderDash: [5, 5],
-                    fill: false,
-                    pointRadius: 0,
-                    pointHoverRadius: 0,
-                },
-            ],
+                { label: 'Temp', data: chartTempData, borderColor: '#FFC107', backgroundColor: gradTemp, borderWidth: 2, fill: true, pointRadius: 0, tension: 0 },
+                { label: 'Safe Max', data: chartSafeMaxData, borderColor: '#333333', borderWidth: 1, borderDash: [5, 5], pointRadius: 0 },
+                { label: 'Safe Min', data: chartSafeMinData, borderColor: '#333333', borderWidth: 1, borderDash: [5, 5], pointRadius: 0 }
+            ]
+        },
+        options: { ...commonOptions, plugins: { ...commonOptions.plugins, tooltip: { ...commonOptions.plugins.tooltip, bodyColor: '#FFC107' } } }
+    });
+
+    // Humidity Chart
+    const ctxHum = document.getElementById('humidity-chart').getContext('2d');
+    const gradHum = ctxHum.createLinearGradient(0, 0, 0, 220);
+    gradHum.addColorStop(0, 'rgba(6, 182, 212, 0.5)');
+    gradHum.addColorStop(1, 'rgba(6, 182, 212, 0.0)');
+    humidityChart = new Chart(ctxHum, {
+        type: 'line',
+        data: {
+            labels: chartLabels,
+            datasets: [{ label: 'Humidity', data: chartHumData, borderColor: '#06B6D4', backgroundColor: gradHum, borderWidth: 2, fill: true, pointRadius: 0, tension: 0 }]
+        },
+        options: { ...commonOptions, plugins: { ...commonOptions.plugins, tooltip: { ...commonOptions.plugins.tooltip, bodyColor: '#06B6D4' } } }
+    });
+
+    // Risk vs Damage Chart
+    const ctxRisk = document.getElementById('risk-chart').getContext('2d');
+    riskChart = new Chart(ctxRisk, {
+        type: 'line',
+        data: {
+            labels: chartLabels,
+            datasets: [
+                { label: 'Damage', data: chartDamageData, borderColor: '#D946EF', borderWidth: 2, pointRadius: 0, stepped: true },
+                { label: 'Risk Score', data: chartRiskData, borderColor: '#EF4444', borderWidth: 2, pointRadius: 0, stepped: true }
+            ]
         },
         options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            animation: {
-                duration: 800,
-                easing: 'easeOutQuart',
-            },
-            interaction: {
-                mode: 'index',
-                intersect: false,
-            },
-            scales: {
-                x: {
-                    display: true,
-                    grid: {
-                        display: false, // Clean minimal look
-                    },
-                    ticks: {
-                        color: 'rgba(255, 255, 255, 0.4)',
-                        font: { family: 'Rajdhani', size: 12 },
-                        maxRotation: 0,
-                        maxTicksLimit: 7,
-                    },
-                },
-                y: {
-                    display: true,
-                    grid: {
-                        color: 'rgba(255, 255, 255, 0.03)',
-                        drawBorder: false,
-                    },
-                    ticks: {
-                        color: 'rgba(255, 255, 255, 0.6)',
-                        font: { family: 'Rajdhani', size: 13, weight: '600' },
-                        callback: (v) => v + '°C',
-                        padding: 10
-                    },
-                    suggestedMin: 0,
-                    suggestedMax: 15,
-                },
-            },
-            plugins: {
-                legend: {
-                    display: true,
-                    position: 'top',
-                    labels: {
-                        color: 'rgba(255, 255, 255, 0.7)',
-                        font: { family: 'Inter', size: 12 },
-                        usePointStyle: true,
-                        pointStyle: 'circle',
-                        padding: 24,
-                    },
-                },
-                tooltip: {
-                    backgroundColor: 'rgba(18, 18, 25, 0.85)',
-                    titleColor: '#ffffff',
-                    bodyColor: 'rgba(255, 255, 255, 0.8)',
-                    borderColor: 'rgba(255, 255, 255, 0.1)',
-                    borderWidth: 1,
-                    titleFont: { family: 'Inter', weight: '600', size: 14 },
-                    bodyFont: { family: 'JetBrains Mono', size: 13 },
-                    padding: 16,
-                    cornerRadius: 12,
-                    displayColors: true,
-                    callbacks: {
-                        label: (ctx) => ` ${ctx.dataset.label}: ${ctx.parsed.y.toFixed(1)}°C`,
-                    },
-                },
-            },
-        },
+            ...commonOptions,
+            plugins: { ...commonOptions.plugins, legend: { display: true, position: 'bottom', labels: { color: '#9CA3AF', font: { family: 'Inter', size: 10 }, usePointStyle: true, boxWidth: 6 } } }
+        }
     });
 }
 
-function addChartPoint(timestamp, temp) {
-    const label = formatTime(timestamp);
+function addChartPoint(data) {
+    const label = formatTime(data.timestamp);
 
     chartLabels.push(label);
-    chartTempData.push(temp);
+    chartTempData.push(data.temp_internal);
+    chartHumData.push(data.humidity);
+    chartDamageData.push(data.vvm_damage * 100); // Scaled for visibility
+    chartRiskData.push(data.risk_score);
     chartSafeMaxData.push(8);
     chartSafeMinData.push(2);
 
     if (chartLabels.length > MAX_CHART_POINTS) {
         chartLabels.shift();
         chartTempData.shift();
+        chartHumData.shift();
+        chartDamageData.shift();
+        chartRiskData.shift();
         chartSafeMaxData.shift();
         chartSafeMinData.shift();
     }
 
-    if (chartInstance) {
-        chartInstance.update('none');
-    }
+    if (tempChart) tempChart.update('none');
+    if (humidityChart) humidityChart.update('none');
+    if (riskChart) riskChart.update('none');
 }
 
 function formatTime(timestamp) {
