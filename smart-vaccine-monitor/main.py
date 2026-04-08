@@ -58,26 +58,26 @@ async def lifespan(app: FastAPI):
     _actual_mode = "SIMULATION"
     if settings.SIMULATION_MODE:
         logger.info("Starting in SIMULATION MODE")
-        from mqtt.simulator import run_simulator
-        task = asyncio.create_task(run_simulator())
-        _background_tasks.append(task)
-        logger.info(f"CSV simulator started: {settings.SIMULATION_CSV_PATH}")
+        # from mqtt.simulator import run_simulator
+        # task = asyncio.create_task(run_simulator())
+        # _background_tasks.append(task)
+        # logger.info(f"CSV simulator started: {settings.SIMULATION_CSV_PATH}")
     else:
         logger.info("Starting in LIVE MODE — connecting to MQTT broker...")
         try:
-            from mqtt.subscriber import start_mqtt_subscriber, set_event_loop
-            loop = asyncio.get_running_loop()
-            set_event_loop(loop)
-            _mqtt_client = start_mqtt_subscriber()
+            # from mqtt.subscriber import start_mqtt_subscriber, set_event_loop
+            # loop = asyncio.get_running_loop()
+            # set_event_loop(loop)
+            # _mqtt_client = start_mqtt_subscriber()
             _actual_mode = "LIVE"
-            logger.info(f"✅ MQTT subscriber connected to {settings.MQTT_BROKER_HOST}:{settings.MQTT_BROKER_PORT}")
+            # logger.info(f"✅ MQTT subscriber connected to {settings.MQTT_BROKER_HOST}:{settings.MQTT_BROKER_PORT}")
         except Exception as e:
             logger.error(f"❌ Failed to start MQTT subscriber: {e}")
             logger.warning("⚠ Auto-falling back to SIMULATION MODE for demo reliability...")
-            from mqtt.simulator import run_simulator
-            task = asyncio.create_task(run_simulator())
-            _background_tasks.append(task)
-            logger.info(f"Fallback CSV simulator started: {settings.SIMULATION_CSV_PATH}")
+            # from mqtt.simulator import run_simulator
+            # task = asyncio.create_task(run_simulator())
+            # _background_tasks.append(task)
+            # logger.info(f"Fallback CSV simulator started: {settings.SIMULATION_CSV_PATH}")
 
     # Step 4: Log config summary
     mode = _actual_mode
@@ -159,3 +159,4 @@ async def websocket_endpoint(websocket: WebSocket):
 
 # Mount static files for frontend assets (CSS, JS)
 app.mount("/frontend", StaticFiles(directory="frontend"), name="frontend")
+
