@@ -30,15 +30,55 @@ let previousStatus = null;
 // ============================================================
 document.addEventListener('DOMContentLoaded', () => {
     initChart();
-    fetchInitialData();
-    fetchReport();
-    fetchHealthStatus();
-    connectWebSocket();
-    checkPdfStatus();
+    // Replaced standard fetch with ngrok live polling
+    fetchLatestData();
+    setInterval(fetchLatestData, 3000);
+
+    // Provide initial loading status
+    document.getElementById('connection-text').textContent = 'Loading...';
 
     // Refresh report button
     document.getElementById('refresh-report-btn').addEventListener('click', fetchReport);
 });
+
+async function fetchLatestData() {
+    try {
+        const response = await fetch("https://alva-unsystematising-butyrically.ngrok-free.dev/api/readings/latest", {
+            headers: {
+                "ngrok-skip-browser-warning": "true"
+            }
+        });
+        if (!response.ok) {
+             console.error('Connection Error');
+             showToast('Connection Error to external API', 'info', '⚠️', 3000);
+             updateConnectionStatus(false);
+             return;
+        }
+        const data = await response.json();
+        
+        // Map external payload to internal format for seamless UI/UX updates
+        const mappedData = {
+            timestamp: data.timestamp || new Date().toISOString(),
+            temp_internal: data.internal_temp,
+            temp_external: data.external_temp,
+            humidity: data.humidity,
+            exposure_minutes: data.unsafe_mins,
+            vvm_damage: data.damage,
+            risk_score: data.risk,
+            status: data.status,
+            is_anomaly: data.anomaly === 1 || data.anomaly === true,
+            potency_percent: data.potency,
+            eta_to_critical: data.eta
+        };
+
+        handleDataUpdate(mappedData);
+        updateConnectionStatus(true);
+    } catch (e) {
+        console.error('Failed to fetch from ngrok:', e);
+        showToast('Connection Error', 'info', '⚠️', 3000);
+        updateConnectionStatus(false);
+    }
+}
 
 // ============================================================
 // TOAST NOTIFICATION SYSTEM
