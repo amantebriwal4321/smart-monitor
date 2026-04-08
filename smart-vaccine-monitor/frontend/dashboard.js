@@ -18,9 +18,14 @@ const MAX_TABLE_ROWS = 10;
 let ws = null;
 let reconnectDelay = 1000;
 const maxReconnectDelay = 30000;
-let chartInstance = null;
+let tempChart = null;
+let humidityChart = null;
+let riskChart = null;
 let chartLabels = [];
 let chartTempData = [];
+let chartHumData = [];
+let chartRiskData = [];
+let chartDamageData = [];
 let chartSafeMaxData = [];
 let chartSafeMinData = [];
 let previousStatus = null;
@@ -30,55 +35,16 @@ let previousStatus = null;
 // ============================================================
 document.addEventListener('DOMContentLoaded', () => {
     initChart();
-    // Replaced standard fetch with ngrok live polling
-    fetchLatestData();
-    setInterval(fetchLatestData, 3000);
-
-    // Provide initial loading status
-    document.getElementById('connection-text').textContent = 'Loading...';
+    fetchInitialData();
+    fetchReport();
+    fetchHealthStatus();
+    connectWebSocket();
+    checkPdfStatus();
+    init3DTilt();
 
     // Refresh report button
     document.getElementById('refresh-report-btn').addEventListener('click', fetchReport);
 });
-
-async function fetchLatestData() {
-    try {
-        const response = await fetch("https://alva-unsystematising-butyrically.ngrok-free.dev/api/readings/latest", {
-            headers: {
-                "ngrok-skip-browser-warning": "true"
-            }
-        });
-        if (!response.ok) {
-             console.error('Connection Error');
-             showToast('Connection Error to external API', 'info', '⚠️', 3000);
-             updateConnectionStatus(false);
-             return;
-        }
-        const data = await response.json();
-        
-        // Map external payload to internal format for seamless UI/UX updates
-        const mappedData = {
-            timestamp: data.timestamp || new Date().toISOString(),
-            temp_internal: data.internal_temp,
-            temp_external: data.external_temp,
-            humidity: data.humidity,
-            exposure_minutes: data.unsafe_mins,
-            vvm_damage: data.damage,
-            risk_score: data.risk,
-            status: data.status,
-            is_anomaly: data.anomaly === 1 || data.anomaly === true,
-            potency_percent: data.potency,
-            eta_to_critical: data.eta
-        };
-
-        handleDataUpdate(mappedData);
-        updateConnectionStatus(true);
-    } catch (e) {
-        console.error('Failed to fetch from ngrok:', e);
-        showToast('Connection Error', 'info', '⚠️', 3000);
-        updateConnectionStatus(false);
-    }
-}
 
 // ============================================================
 // TOAST NOTIFICATION SYSTEM
@@ -190,9 +156,11 @@ async function fetchInitialData() {
 
         if (readings && readings.length > 0) {
             readings.forEach(r => {
-                addChartPoint(r.timestamp, r.temp_internal);
+                addChartPoint(r);
             });
-            chartInstance.update('none');
+            if (tempChart) tempChart.update('none');
+            if (humidityChart) humidityChart.update('none');
+            if (riskChart) riskChart.update('none');
 
             const latest = readings[readings.length - 1];
             handleDataUpdate(latest);
@@ -323,7 +291,7 @@ function handleDataUpdate(data) {
     updateVVM(data);
     updateETA(data);
     updateHumidity(data);
-    addChartPoint(data.timestamp, data.temp_internal);
+    addChartPoint(data);
     addTableRow(data);
 
     // Status change detection → toast + flash
@@ -527,145 +495,103 @@ function updateHumidity(data) {
 // CHART.JS (Enhanced with gradient fill)
 // ============================================================
 function initChart() {
-    const ctx = document.getElementById('temp-chart').getContext('2d');
+    // Shared chart options logic
+    const commonOptions = {
+        responsive: true, maintainAspectRatio: false,
+        animation: { duration: 800, easing: 'easeOutQuart' },
+        interaction: { mode: 'index', intersect: false },
+        plugins: { 
+            legend: { display: false },
+            tooltip: {
+                backgroundColor: 'rgba(26, 26, 26, 0.95)',
+                titleColor: '#FFFFFF',
+                bodyColor: '#FFC107',
+                borderColor: '#2A2A2A',
+                borderWidth: 1,
+                titleFont: { family: 'Rajdhani', weight: '600', size: 14 },
+                bodyFont: { family: 'JetBrains Mono', size: 13 },
+            }
+        },
+        scales: {
+            x: { display: true, grid: { display: false }, ticks: { color: 'rgba(156, 163, 175, 0.6)', font: { family: 'Rajdhani', size: 10 } } },
+            y: { display: true, grid: { color: 'rgba(31, 41, 55, 0.5)' }, ticks: { color: 'rgba(156, 163, 175, 0.8)', font: { family: 'Rajdhani', size: 11 } } }
+        }
+    };
 
-    // Create gradient fill
-    const gradient = ctx.createLinearGradient(0, 0, 0, 280);
-    gradient.addColorStop(0, 'rgba(0, 212, 255, 0.25)');
-    gradient.addColorStop(1, 'rgba(0, 212, 255, 0.0)');
-
-    chartInstance = new Chart(ctx, {
+    // Temp Chart
+    const ctxTemp = document.getElementById('temp-chart').getContext('2d');
+    const gradTemp = ctxTemp.createLinearGradient(0, 0, 0, 220);
+    gradTemp.addColorStop(0, 'rgba(255, 193, 7, 0.4)');
+    gradTemp.addColorStop(1, 'rgba(255, 193, 7, 0.0)');
+    tempChart = new Chart(ctxTemp, {
         type: 'line',
         data: {
             labels: chartLabels,
             datasets: [
-                {
-                    label: 'Internal Temp (°C)',
-                    data: chartTempData,
-                    borderColor: '#00D4FF',
-                    backgroundColor: gradient,
-                    borderWidth: 2.5,
-                    fill: true,
-                    tension: 0.4,
-                    pointRadius: 0,
-                    pointHoverRadius: 6,
-                    pointHoverBackgroundColor: '#00D4FF',
-                    pointHoverBorderColor: '#fff',
-                    pointHoverBorderWidth: 2,
-                },
-                {
-                    label: 'Safe Max (8°C)',
-                    data: chartSafeMaxData,
-                    borderColor: 'rgba(239, 68, 68, 0.4)',
-                    borderWidth: 1.5,
-                    borderDash: [6, 4],
-                    fill: false,
-                    pointRadius: 0,
-                    pointHoverRadius: 0,
-                },
-                {
-                    label: 'Safe Min (2°C)',
-                    data: chartSafeMinData,
-                    borderColor: 'rgba(59, 130, 246, 0.4)',
-                    borderWidth: 1.5,
-                    borderDash: [6, 4],
-                    fill: '-1',
-                    backgroundColor: 'rgba(34, 197, 94, 0.04)',
-                    pointRadius: 0,
-                    pointHoverRadius: 0,
-                },
-            ],
+                { label: 'Temp', data: chartTempData, borderColor: '#FFC107', backgroundColor: gradTemp, borderWidth: 2, fill: true, pointRadius: 0, tension: 0 },
+                { label: 'Safe Max', data: chartSafeMaxData, borderColor: '#333333', borderWidth: 1, borderDash: [5, 5], pointRadius: 0 },
+                { label: 'Safe Min', data: chartSafeMinData, borderColor: '#333333', borderWidth: 1, borderDash: [5, 5], pointRadius: 0 }
+            ]
+        },
+        options: { ...commonOptions, plugins: { ...commonOptions.plugins, tooltip: { ...commonOptions.plugins.tooltip, bodyColor: '#FFC107' } } }
+    });
+
+    // Humidity Chart
+    const ctxHum = document.getElementById('humidity-chart').getContext('2d');
+    const gradHum = ctxHum.createLinearGradient(0, 0, 0, 220);
+    gradHum.addColorStop(0, 'rgba(6, 182, 212, 0.5)');
+    gradHum.addColorStop(1, 'rgba(6, 182, 212, 0.0)');
+    humidityChart = new Chart(ctxHum, {
+        type: 'line',
+        data: {
+            labels: chartLabels,
+            datasets: [{ label: 'Humidity', data: chartHumData, borderColor: '#06B6D4', backgroundColor: gradHum, borderWidth: 2, fill: true, pointRadius: 0, tension: 0 }]
+        },
+        options: { ...commonOptions, plugins: { ...commonOptions.plugins, tooltip: { ...commonOptions.plugins.tooltip, bodyColor: '#06B6D4' } } }
+    });
+
+    // Risk vs Damage Chart
+    const ctxRisk = document.getElementById('risk-chart').getContext('2d');
+    riskChart = new Chart(ctxRisk, {
+        type: 'line',
+        data: {
+            labels: chartLabels,
+            datasets: [
+                { label: 'Damage', data: chartDamageData, borderColor: '#D946EF', borderWidth: 2, pointRadius: 0, stepped: true },
+                { label: 'Risk Score', data: chartRiskData, borderColor: '#EF4444', borderWidth: 2, pointRadius: 0, stepped: true }
+            ]
         },
         options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            animation: {
-                duration: 500,
-                easing: 'easeOutCubic',
-            },
-            interaction: {
-                mode: 'index',
-                intersect: false,
-            },
-            scales: {
-                x: {
-                    display: true,
-                    grid: {
-                        color: 'rgba(255, 255, 255, 0.03)',
-                        drawBorder: false,
-                    },
-                    ticks: {
-                        color: '#64748b',
-                        font: { family: 'Rajdhani', size: 11 },
-                        maxRotation: 0,
-                        maxTicksLimit: 8,
-                    },
-                },
-                y: {
-                    display: true,
-                    grid: {
-                        color: 'rgba(255, 255, 255, 0.03)',
-                        drawBorder: false,
-                    },
-                    ticks: {
-                        color: '#64748b',
-                        font: { family: 'Rajdhani', size: 12 },
-                        callback: (v) => v + '°C',
-                    },
-                    suggestedMin: 0,
-                    suggestedMax: 20,
-                },
-            },
-            plugins: {
-                legend: {
-                    display: true,
-                    position: 'top',
-                    labels: {
-                        color: '#94a3b8',
-                        font: { family: 'Inter', size: 11 },
-                        usePointStyle: true,
-                        pointStyle: 'line',
-                        padding: 20,
-                    },
-                },
-                tooltip: {
-                    backgroundColor: 'rgba(10, 14, 26, 0.95)',
-                    titleColor: '#f1f5f9',
-                    bodyColor: '#94a3b8',
-                    borderColor: 'rgba(0, 212, 255, 0.2)',
-                    borderWidth: 1,
-                    titleFont: { family: 'Inter', weight: '600', size: 13 },
-                    bodyFont: { family: 'JetBrains Mono', size: 12 },
-                    padding: 14,
-                    cornerRadius: 10,
-                    displayColors: true,
-                    callbacks: {
-                        label: (ctx) => ` ${ctx.dataset.label}: ${ctx.parsed.y.toFixed(1)}°C`,
-                    },
-                },
-            },
-        },
+            ...commonOptions,
+            plugins: { ...commonOptions.plugins, legend: { display: true, position: 'bottom', labels: { color: '#9CA3AF', font: { family: 'Inter', size: 10 }, usePointStyle: true, boxWidth: 6 } } }
+        }
     });
 }
 
-function addChartPoint(timestamp, temp) {
-    const label = formatTime(timestamp);
+function addChartPoint(data) {
+    const label = formatTime(data.timestamp);
 
     chartLabels.push(label);
-    chartTempData.push(temp);
+    chartTempData.push(data.temp_internal);
+    chartHumData.push(data.humidity);
+    chartDamageData.push(data.vvm_damage * 100); // Scaled for visibility
+    chartRiskData.push(data.risk_score);
     chartSafeMaxData.push(8);
     chartSafeMinData.push(2);
 
     if (chartLabels.length > MAX_CHART_POINTS) {
         chartLabels.shift();
         chartTempData.shift();
+        chartHumData.shift();
+        chartDamageData.shift();
+        chartRiskData.shift();
         chartSafeMaxData.shift();
         chartSafeMinData.shift();
     }
 
-    if (chartInstance) {
-        chartInstance.update('none');
-    }
+    if (tempChart) tempChart.update('none');
+    if (humidityChart) humidityChart.update('none');
+    if (riskChart) riskChart.update('none');
 }
 
 function formatTime(timestamp) {
@@ -920,3 +846,47 @@ function addTableRow(data) {
         if (btn) sendMessage(btn.getAttribute('data-query'));
     });
 })();
+
+// ============================================================
+// 3D SPATIAL TILT EFFECT
+// ============================================================
+function init3DTilt() {
+    // Select all cards, hero status, and chart cards for 3D treatment
+    const tiltElements = document.querySelectorAll('.card, .status-hero, .chart-section');
+
+    tiltElements.forEach(el => {
+        el.addEventListener('mousemove', (e) => {
+            const rect = el.getBoundingClientRect();
+            // Calculate mouse position relative to the element (0 to 1)
+            const x = (e.clientX - rect.left) / rect.width;
+            const y = (e.clientY - rect.top) / rect.height;
+
+            // Offset to range -1 to 1
+            const offsetX = (x - 0.5) * 2;
+            const offsetY = (y - 0.5) * 2;
+
+            // Calculate rotation degrees (max 10 degrees)
+            const degreeX = offsetY * -8;
+            const degreeY = offsetX * 8;
+
+            // Apply transform physics
+            el.style.transform = `perspective(1000px) rotateX(${degreeX}deg) rotateY(${degreeY}deg) scale3d(1.02, 1.02, 1.02)`;
+
+            // Adjust internal glow/glare if it exists
+            const glow = el.querySelector('.card-glow, .status-hero-glow');
+            if (glow) {
+                glow.style.transform = `translate(${offsetX * 30}%, ${offsetY * 30}%)`;
+                glow.style.opacity = '0.3';
+            }
+        });
+
+        // Reset when mouse leaves
+        el.addEventListener('mouseleave', () => {
+            el.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+            const glow = el.querySelector('.card-glow, .status-hero-glow');
+            if (glow) {
+                glow.style.opacity = '0';
+            }
+        });
+    });
+}

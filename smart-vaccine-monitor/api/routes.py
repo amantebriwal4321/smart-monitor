@@ -19,15 +19,6 @@ logger = setup_logger("vaccine_monitor.routes")
 
 router = APIRouter()
 
-# Global store for external Raspberry Pi data
-latest_data = {}
-
-@router.post("/api/push")
-def push_data(data: dict):
-    global latest_data
-    latest_data = data
-    return {"status": "received"}
-
 
 @router.get("/health")
 async def health_check():
@@ -58,13 +49,19 @@ async def api_get_readings(limit: int = Query(default=60, ge=1, le=500)):
 
 
 @router.get("/api/readings/latest")
-def get_latest():
-    """Get the single most recent sensor reading from external source.
+async def api_get_latest_reading():
+    """Get the single most recent sensor reading.
 
     Returns:
-        JSON reading object.
+        JSON reading object or 404.
     """
-    return latest_data
+    reading = await get_latest_reading()
+    if reading is None:
+        return JSONResponse(
+            status_code=404,
+            content={"detail": "No readings available yet"}
+        )
+    return reading
 
 
 @router.get("/api/status")
